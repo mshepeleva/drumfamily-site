@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japón en flor de cerezo 2027 · Tour de autor</title>
+<meta name="description" content="Viaje en grupo pequeño a Japón durante el hanami 2027: Tokio, Monte Fuji, Kioto, Uji, Nara y Osaka. Del 27 de marzo al 4 de abril de 2027. Acompañamiento en español.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#fffaf8; --ink:#2b2224; --muted:#6f6266; --sakura:#f4b6c2; --sakura-deep:#d9577a;
+    --red:#c8102e; --card:#ffffff; --line:#f0dde2; --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  h1,h2,h3{font-family:"Noto Serif JP",Georgia,serif;line-height:1.2}
+  a{color:inherit}
+  img{display:block;max-width:100%}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+  section{padding:72px 0}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;color:var(--sakura-deep);font-weight:600;margin-bottom:10px}
+  h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:18px}
+  .lead{color:var(--muted);max-width:640px;font-size:1.05rem}
+
+  /* HERO */
+  .hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;
+    background:radial-gradient(circle at 78% 30%,#ffffff 0 9%,transparent 9.3%),
+               linear-gradient(180deg,#fde4ea 0%,#f9c9d4 55%,#f3aebf 100%);}
+  .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;
+    background:linear-gradient(160deg,transparent 0 30%,#8a6a78 30.2% 38%,transparent 38.2%),
+               linear-gradient(200deg,transparent 0 42%,#a48493 42.2% 52%,transparent 52.2%);
+    opacity:.35}
+  .petal{position:absolute;width:14px;height:10px;background:#fff;border-radius:60% 0 60% 0;opacity:.85;animation:fall linear infinite}
+  @keyframes fall{0%{transform:translateY(-10vh) rotate(0)}100%{transform:translateY(105vh) rotate(540deg)}}
+  @media (prefers-reduced-motion:reduce){.petal{display:none}}
+  .hero .wrap{position:relative;z-index:2}
+  .hero h1{font-size:clamp(2.4rem,7vw,4.6rem);margin:12px 0 18px;color:#3a1f27}
+  .hero p{font-size:1.15rem;max-width:560px;color:#4d3a40}
+  .badges{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 32px}
+  .badge{background:rgba(255,255,255,.75);backdrop-filter:blur(4px);padding:8px 14px;border-radius:999px;font-weight:500;font-size:.92rem}
+  .btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;padding:15px 28px;border-radius:999px;font-weight:600;transition:transform .15s,box-shadow .15s}
+  .btn:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(200,16,46,.28)}
+  .btn.ghost{background:transparent;color:var(--ink);border:2px solid var(--ink);margin-left:10px}
+
+  /* HIGHLIGHTS */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-top:36px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+  .card .ph{position:relative;aspect-ratio:4/3;background:linear-gradient(135deg,#fde4ea,#f7c3cf);display:flex;align-items:center;justify-content:center;font-size:3rem}
+  .card .ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .card .body{padding:20px 22px 24px}
+  .card h3{font-size:1.15rem;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:.95rem}
+
+  /* ITINERARY */
+  .itin{margin-top:32px;display:flex;flex-direction:column;gap:12px}
+  details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:0 22px}
+  summary{cursor:pointer;list-style:none;padding:18px 0;display:flex;gap:16px;align-items:center;font-weight:600}
+  summary::-webkit-details-marker{display:none}
+  summary .day{flex:0 0 auto;background:var(--sakura);color:#5a1d2e;border-radius:10px;padding:4px 10px;font-size:.82rem}
+  summary::after{content:"+";margin-left:auto;font-size:1.4rem;color:var(--sakura-deep)}
+  details[open] summary::after{content:"–"}
+  details .txt{padding:0 0 18px;color:var(--muted)}
+  details .txt p+p{margin-top:10px}
+  .photos{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;padding:0 0 20px}
+  .photos:not(:has(img)){display:none}
+  .photos img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:12px}
+  @media (max-width:560px){.photos{grid-template-columns:repeat(2,1fr)}}
+  .note{font-size:.85rem;color:var(--muted);margin-top:16px}
+
+  /* HOTELS */
+  .hotels{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:30px}
+  .hotel{border-left:4px solid var(--sakura-deep);background:var(--card);padding:16px 18px;border-radius:0 12px 12px 0}
+  .hotel b{display:block}
+  .hotel span{color:var(--muted);font-size:.9rem}
+  .criteria{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+  .criteria span{border:1px solid var(--line);border-radius:999px;padding:6px 12px;font-size:.88rem;background:#fff}
+
+  /* PRICE */
+  .price-box{display:grid;grid-template-columns:1.25fr 1fr;gap:32px;background:#2b2224;color:#fff;border-radius:26px;padding:44px;margin-top:30px}
+  .price-box h3{font-size:1.25rem;margin-bottom:14px;color:var(--sakura)}
+  .inc{list-style:none;display:grid;gap:14px}
+  .inc li{padding-left:28px;position:relative}
+  .inc li::before{content:"🌸";position:absolute;left:0;top:0}
+  .inc b{display:block}
+  .inc span{opacity:.75;font-size:.92rem}
+  .no{list-style:none;display:grid;gap:8px}
+  .no li::before{content:"✕  ";color:#f08aa0}
+  .price{font-family:"Noto Serif JP",serif;font-size:clamp(2.4rem,6vw,3.2rem);font-weight:700;line-height:1.05}
+  .price small{display:block;font-family:Inter,sans-serif;font-size:1rem;font-weight:400;opacity:.8;margin-top:6px}
+  .msi{display:inline-block;background:var(--sakura);color:#5a1d2e;font-weight:600;border-radius:999px;padding:6px 14px;margin-top:16px;font-size:.9rem}
+  .facts{margin:20px 0 26px;display:grid;gap:8px;opacity:.92}
+  @media (max-width:760px){.price-box{grid-template-columns:1fr;padding:28px}.btn.ghost{margin:12px 0 0}}
+
+  /* FAQ */
+  .faq{margin-top:28px;display:flex;flex-direction:column;gap:10px}
+
+  /* CONTACT */
+  .contact{background:linear-gradient(135deg,#fde4ea,#f7c3cf);text-align:center;border-radius:26px;padding:56px 24px}
+  .contact p{margin:10px auto 26px;max-width:520px;color:#4d3a40}
+  footer{padding:36px 0;text-align:center;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow">Tour de autor · Grupo pequeño · En español</div>
+    <h1>Japón en flor<br>de cerezo 2027</h1>
+    <p>Vive el hanami, la temporada en que todo Japón sale a celebrar los cerezos en flor. Nueve días entre rascacielos, templos milenarios, una noche en ryokan y la silueta del Monte Fuji.</p>
+    <div class="badges">
+      <span class="badge">📅 27 mar – 4 abr 2027</span>
+      <span class="badge">🗾 9 días · 8 noches</span>
+      <span class="badge">👥 Máx. 10 viajeros</span>
+      <span class="badge">🗣️ Acompañamiento en español</span>
+      <span class="badge">💳 Meses sin intereses</span>
+    </div>
+    <a class="btn" href="https://wa.me/525525250257?text=Hola%2C%20quiero%20recibir%20el%20programa%20completo%20del%20tour%20a%20Jap%C3%B3n%20en%20flor%20de%20cerezo%202027" target="_blank" rel="noopener">Quiero recibir el programa completo</a>
+    <a class="btn ghost" href="https://wa.me/525525250257?text=Hola%2C%20quiero%20reservar%20mi%20lugar%20en%20el%20tour%20a%20Jap%C3%B3n%20en%20flor%20de%20cerezo%202027" target="_blank" rel="noopener">Quiero reservar mi lugar</a>
+  </div>
+</header>
+
+<!--
+  FOTOS: crea una carpeta "img" junto a este archivo y coloca ahí las fotos
+  con los nombres indicados. Si una foto no existe, simplemente no se muestra.
+-->
+
+<!-- HIGHLIGHTS -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Lo que vas a vivir</div>
+    <h2>Lo mejor de Japón, en un solo viaje</h2>
+    <p class="lead">Combinamos el Japón ultramoderno con el más tradicional, a un ritmo pensado para disfrutar y no solo para tachar lugares de una lista.</p>
+    <div class="grid">
+      <div class="card"><div class="ph">🚦<img src="img/shibuya.jpg" alt="Shibuya" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Shibuya</h3><p>El cruce peatonal más famoso del mundo y el Tokio de neón que conoces por las películas.</p></div></div>
+      <div class="card"><div class="ph">🏮<img src="img/asakusa.jpg" alt="Asakusa" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Asakusa</h3><p>Callejones, faroles y templos que conservan el ambiente del antiguo Edo.</p></div></div>
+      <div class="card"><div class="ph">🗻<img src="img/fuji.jpg" alt="Monte Fuji" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Monte Fuji</h3><p>La montaña sagrada vista desde el lago Kawaguchiko y la pagoda Chureito, con los cerezos en flor.</p></div></div>
+      <div class="card"><div class="ph">⛩️<img src="img/kioto.jpg" alt="Kioto" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Kioto</h3><p>Miles de toriis naranjas, templos de madera y el barrio de las geishas en el corazón cultural del país.</p></div></div>
+      <div class="card"><div class="ph">🦌<img src="img/nara.jpg" alt="Nara" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Nara</h3><p>Ciervos que pasean libres entre templos monumentales, Patrimonio de la Humanidad.</p></div></div>
+      <div class="card"><div class="ph">🍢<img src="img/osaka.jpg" alt="Osaka" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Osaka</h3><p>La capital gastronómica de Japón: comida callejera, luces y mucha energía en Dotonbori.</p></div></div>
+      <div class="card"><div class="ph">🍣<img src="img/comida.jpg" alt="Cocina japonesa" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Cocina japonesa</h3><p>Del sushi en el mercado de Tsukiji a los antojitos callejeros de Osaka.</p></div></div>
+      <div class="card"><div class="ph">🍵<img src="img/te.jpg" alt="Ceremonia del té" loading="lazy" onerror="this.remove()"></div><div class="body"><h3>Ceremonia del té</h3><p>Matcha auténtico en Uji, la región más famosa de Japón por su té verde.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ITINERARY -->
+<section id="itinerario" style="background:#fff">
+  <div class="wrap">
+    <div class="eyebrow">Itinerario</div>
+    <h2>Día a día</h2>
+    <p class="lead">Toca cada día para ver el detalle.</p>
+    <div class="itin">
+
+      <details>
+        <summary><span class="day">Día 1</span>Tokio · Ginza</summary>
+        <div class="txt"><p>¡Bienvenidos a Tokio! Desde el trayecto del aeropuerto empezarás a sentir la ciudad. Después del check-in salimos a caminar por Ginza, una de las zonas más exclusivas de Japón, y cerramos el día con una cena tranquila para descansar del viaje.</p></div>
+        <div class="photos"><img src="img/dia1-1.jpg" alt="" loading="lazy" onerror="this.remove()"><img src="img/dia1-2.jpg" alt="" loading="lazy" onerror="this.remove()"><img src="img/dia1-3.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      </details>
+
+      <details>
+        <summary><span class="day">Día 2</span>Tokio · Primer encuentro con la ciudad</summary>
+        <div class="txt">
+          <p>Caminamos hacia el Palacio Imperial y visitamos el santuario sintoísta Yasukuni, donde está el cerezo que usan los meteorólogos para anunciar oficialmente el inicio del hanami en Tokio.</p>
+          <p>Comemos en el legendario mercado de pescado de Tsukiji y seguimos a Asakusa, el barrio con espíritu de la época Edo: el templo Senso-ji, uno de los más antiguos de la ciudad, y la calle Nakamise-dori, ideal para comprar dulces tradicionales, kimonos, cerámica y recuerdos.</p>
+        </div>
+        <div class="photos"><img src="img/dia2-1.jpg" alt="" loading="lazy" onerror="this.remove()"><img src="img/dia2-2.jpg" alt="" loading="lazy" onerror="this.remove()"><img src="img/dia2-3.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      </details>
+
+      <details>
+        <summary><span class="day">Día 3</span>El Tokio moderno</summary>
+        <div class="txt"><p>Un día dedicado a la cara futurista de la capital: el famoso cruce de Shibuya, arte digital, diseño, anuncios de neón y la energía de los barrios que nunca duermen.</p></div>
+        <div class="photos"><img src="img/dia3-1.jpg" alt="" loading="lazy" onerror="this.remove()"><img src="img/dia3-2.jpg" alt="" loading="lazy" onerror="this.remove()"><img src="img/dia3-3.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      </details>
+
+      <details>
+        <summary><span class="day">Día 4</span>Los Cinco Lagos del Monte Fuji</summary>
+        <div class="txt">
+          <p>No se puede ir a Japón sin ver el Fuji. Pasamos el día completo en el lago Kawaguchiko, con vistas espectaculares del volcán, cerezos en flor y naturaleza.</p>
+          <p>Esa noche dormimos en un ryokan, un hospedaje tradicional japonés con aguas termales (onsen): futones sobre tatami, decoración minimalista y yukata en lugar de bata.</p>
+        </div>
+        <div class="photos"><img src="img/dia4-1.jpg" alt="" loading="lazy" onerror="this.remove()"><img src="img/dia4-2.jpg" alt="" loading="lazy" onerror="this.remove()"><img src="img/dia4-3.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      </details>
+
+      <details>
+        <summary><span class="day">Día 5</span>Llegada a Kioto</summary>
+        <div class="txt">
+          <p>Empezamos temprano en la pagoda Chureito, quizá la postal más famosa del Fuji. Después, autobús y tren bala shinkansen hasta Kioto, la antigua capital imperial.</p>
+          <p>Por la tarde paseamos entre casas de madera y cerezos; con suerte veremos geishas y maikos con sus kimonos de seda. Terminamos con una caminata nocturna por el barrio de Gion.</p>
+        </div>
+        <div class="photos"><img src="img/dia5-1.jpg" alt="" loading="lazy" onerror="this.remove()"><img src="img/dia5-2.jpg" alt="" loading="lazy" onerror="this.remove()"><img src="img/dia5-3.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      </details>
+
+      <details>
+        <summary><span class="day">Día 6</span>Kioto, capital cultural</summary>
+        <div class="txt">
+          <p>Por la mañana recorremos el Camino del Filósofo, bordeado por cientos de cerezos, y bajamos por las calles de Higashiyama hasta el templo Kiyomizu-dera, el "Templo del Agua Pura".</p>
+          <p>Al atardecer visitamos Fushimi Inari Taisha y caminamos bajo su interminable túnel de toriis naranjas.</p>
+        </div>
+        <div class="photos"><img src="img/dia6-1.jpg" alt="" loading="lazy" onerror="this.remove()"><img src="img/dia6-2.jpg" alt="" loading="lazy" onerror="this.remove()"><img src="img/dia6-3.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      </details>
+
+      <details>
+        <summary><span class="day">Día 7</span>Uji y Nara</summary>
+        <div class="txt">
+          <p>Primera parada: Uji, la capital del té japonés, donde se cultiva desde hace siglos. Participamos en una pequeña ceremonia del té con matcha auténtico, recorremos sus calles y visitamos el templo Byodo-in.</p>
+          <p>Seguimos a Nara, la primera capital de Japón, cuyo centro histórico es Patrimonio Mundial de la UNESCO. Conocemos el monumental templo Todai-ji y el santuario Kasuga Taisha, con más de mil años de historia y famoso por sus linternas de piedra. En el camino nos acompañan los ciervos de Nara, considerados tesoro nacional.</p>
+        </div>
+        <div class="photos"><img src="img/dia7-1.jpg" alt="" loading="lazy" onerror="this.remove()"><img src="img/dia7-2.jpg" alt="" loading="lazy" onerror="this.remove()"><img src="img/dia7-3.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      </details>
+
+      <details>
+        <summary><span class="day">Día 8</span>Osaka</summary>
+        <div class="txt">
+          <p>Después del desayuno viajamos a Osaka. Visitamos su imponente castillo y, por la tarde, tienes tiempo libre para ir de compras en la capital comercial de Japón.</p>
+          <p>De noche, cena en Dotonbori, la calle gastronómica más famosa del país.</p>
+        </div>
+        <div class="photos"><img src="img/dia8-1.jpg" alt="" loading="lazy" onerror="this.remove()"><img src="img/dia8-2.jpg" alt="" loading="lazy" onerror="this.remove()"><img src="img/dia8-3.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      </details>
+
+      <details>
+        <summary><span class="day">Día 9</span>¡Sayonara, Japón!</summary>
+        <div class="txt"><p>Traslado al aeropuerto. No es un adiós a Japón, es un "hasta pronto". ❤️</p></div>
+        <div class="photos"><img src="img/dia9-1.jpg" alt="" loading="lazy" onerror="this.remove()"><img src="img/dia9-2.jpg" alt="" loading="lazy" onerror="this.remove()"></div>
+      </details>
+
+    </div>
+    <p class="note">* El orden de las visitas y de los días puede ajustarse; siempre se mantienen todas las ciudades y servicios incluidos en el programa. Las comidas y cenas mencionadas en el itinerario no están incluidas en el precio.</p>
+  </div>
+</section>
+
+<!-- HOTELS -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Hospedaje</div>
+    <h2>Dónde vamos a dormir</h2>
+    <p class="lead">Hoteles cómodos y bien ubicados para descansar después de cada día de aventura, más una noche en un ryokan tradicional con onsen.</p>
+    <div class="hotels">
+      <div class="hotel"><b>The b Ginza 4★</b><span>Tokio</span></div>
+      <div class="hotel"><b>Ryokan tradicional</b><span>Región del Monte Fuji · 1 noche</span></div>
+      <div class="hotel"><b>Oike Hotel 4★</b><span>Kioto</span></div>
+      <div class="hotel"><b>Royal Twin Hotel Kyoto Hachijoguchi 4★</b><span>Kioto</span></div>
+      <div class="hotel"><b>Hotel Gracery Osaka Namba 4★</b><span>Osaka</span></div>
+    </div>
+    <div class="criteria">
+      <span>Seguridad</span><span>Comodidad</span><span>Buenas reseñas</span><span>Estilo</span><span>Ubicación</span>
+    </div>
+    <p class="note">* Los hoteles pueden sustituirse por otros de la misma categoría o superior.</p>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section id="precio" style="background:#fff">
+  <div class="wrap">
+    <div class="eyebrow">Precio</div>
+    <h2>Todo lo que incluye tu viaje</h2>
+    <div class="price-box">
+      <div>
+        <h3>Incluye</h3>
+        <ul class="inc">
+          <li><b>Organización</b><span>Asesoría e información antes y durante todo el viaje.</span></li>
+          <li><b>Acompañamiento en español</b><span>Líder de grupo durante toda la ruta y guías locales en Tokio, Kioto y Nara.</span></li>
+          <li><b>Hospedaje</b><span>Habitación doble: 7 noches en hoteles 4★ y 1 noche en ryokan tradicional. Impuesto turístico incluido.</span></li>
+          <li><b>Desayunos</b><span>Todos los días en el hotel.</span></li>
+          <li><b>Transporte</b><span>Traslados aeropuerto–hotel–aeropuerto en tren rápido, boletos de shinkansen, trenes locales, metro y autobuses.</span></li>
+          <li><b>Entradas</b><span>Templos, parques, castillos y museos del programa.</span></li>
+          <li><b>Ceremonia del té</b><span>Experiencia de matcha en Uji.</span></li>
+          <li><b>Sorpresas y regalos</b><span>Detalles especiales durante el viaje.</span></li>
+        </ul>
+        <h3 style="margin-top:28px">No incluye</h3>
+        <ul class="no">
+          <li>Vuelos internacionales</li>
+          <li>Seguro de viaje</li>
+          <li>Comidas y cenas</li>
+          <li>Bebidas alcohólicas</li>
+        </ul>
+      </div>
+      <div>
+        <div class="price">$102,600 MXN<small>por persona, en habitación doble</small></div>
+        <span class="msi">💳 Meses sin intereses</span>
+        <div class="facts">
+          <div>📅 27 de marzo – 4 de abril de 2027</div>
+          <div>🔖 Aparta tu lugar con el 40% de anticipo</div>
+          <div>💵 Pago con tarjeta o en efectivo</div>
+          <div>👥 Grupo de 10 viajeros + líder de grupo</div>
+          <div>🎒 Edad mínima: 12 años</div>
+        </div>
+        <a class="btn" href="https://wa.me/525525250257?text=Hola%2C%20quiero%20reservar%20mi%20lugar%20en%20el%20tour%20a%20Jap%C3%B3n%20en%20flor%20de%20cerezo%202027" target="_blank" rel="noopener">Reservar ahora</a>
+        <p class="note" style="color:#d8c8cd">El programa puede variar según la fecha elegida.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Preguntas frecuentes</div>
+    <h2>Lo que más nos preguntan</h2>
+    <div class="faq">
+      <details><summary>¿El viaje es en español?</summary><div class="txt"><p>Sí. El líder de grupo y los guías locales en Tokio, Kioto y Nara hablan español.</p></div></details>
+      <details><summary>¿Necesito visa para viajar a Japón?</summary><div class="txt"><p>Las personas con pasaporte mexicano pueden entrar a Japón como turistas sin visa por estancias cortas. Te recomendamos confirmar los requisitos vigentes antes de comprar tus vuelos.</p></div></details>
+      <details><summary>¿Por qué los vuelos no están incluidos?</summary><div class="txt"><p>Así puedes elegir la aerolínea, la tarifa y la ruta que más te convengan, o usar tus millas. Con gusto te orientamos sobre los horarios ideales para coincidir con el grupo.</p></div></details>
+      <details><summary>¿Cómo se paga?</summary><div class="txt"><p>Apartas tu lugar con el 40% del precio. Aceptamos tarjeta y efectivo, y puedes pagar a meses sin intereses.</p></div></details>
+      <details><summary>Viajo solo/a, ¿me voy a sentir cómodo/a?</summary><div class="txt"><p>Totalmente. En un grupo de solo 10 personas es fácil integrarse, y el líder de grupo está contigo durante todo el viaje.</p></div></details>
+      <details><summary>¿Qué tan exigente es físicamente?</summary><div class="txt"><p>Se camina bastante, como en cualquier viaje urbano por Japón, pero no se requiere una condición física especial. Basta con buen calzado y ganas de explorar.</p></div></details>
+      <details><summary>¿Habrá tiempo libre?</summary><div class="txt"><p>Sí. Hay tardes libres, como la de compras en Osaka, y las comidas y cenas son a tu elección.</p></div></details>
+      <details><summary>¿Puedo pedir un tour privado?</summary><div class="txt"><p>Sí, también podemos diseñar un viaje a Japón a la medida. Escríbenos y lo platicamos.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contacto">
+  <div class="wrap">
+    <div class="contact">
+      <div class="eyebrow">Solo 10 lugares</div>
+      <h2>¿Listo para ver los cerezos en Japón?</h2>
+      <p>Escríbenos y te asesoramos sin costo para que este viaje sea justo como lo sueñas.</p>
+      <a class="btn" href="https://wa.me/525525250257?text=Hola%2C%20me%20interesa%20el%20tour%20a%20Jap%C3%B3n%20en%20flor%20de%20cerezo%202027%20y%20quiero%20m%C3%A1s%20informaci%C3%B3n" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+      <p style="margin-top:18px;margin-bottom:0">WhatsApp: <a href="https://wa.me/525525250257" target="_blank" rel="noopener">55 2525 0257</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Tour operado por Gelios Travel · © 2026</div>
+</footer>
+
+<script>
+  (function(){
+    var hero=document.querySelector('.hero');
+    for(var i=0;i<18;i++){
+      var p=document.createElement('span');
+      p.className='petal';
+      p.style.left=Math.random()*100+'%';
+      p.style.animationDuration=(7+Math.random()*8)+'s';
+      p.style.animationDelay=(-Math.random()*12)+'s';
+      p.style.transform='scale('+(0.6+Math.random()*0.8)+')';
+      hero.appendChild(p);
+    }
+  })();
+</script>
+</body>
+</html>
